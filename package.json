@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx cypress open",
+    "report": "npx cypress run --headless --spec 'cypress/integration/Google.feature'"
   },
   "author": "",
   "license": "ISC",
