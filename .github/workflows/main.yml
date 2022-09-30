@@ -17,8 +17,36 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      # uses: actions/checkout@v3
 
-      - uses: cypress-io/github-action@v4.2.0
-        name: 'Cypress Spec Check'
-        run: npm run report
+    - uses: cypress-io/github-action@v4.2.0
+      with:
+        # record: # optional
+        # Set configuration values. Separate multiple values with a comma. The values set here override any values set in your configuration file.
+        # config: # optional
+        # Path to the cypress config file where configuration values are set.
+        # config-file: # optional, default is 
+        # Sets Cypress environment variables
+        # env: # optional
+        # Command for starting local server in the background
+        start: npm run report # optional
+        # Whether or not to run install
+        install: true # optional
+        
+        # Whether or not to run tests
+        runTests: true # optional
+        # Amount of time to wait for wait-on url to be available
+        # wait-on-timeout: # optional
+        # Whether or not to load balance tests using multiple containers
+        # parallel: # optional
+        # # Group setting for tests
+        # group: # optional
+        # # Tag setting for tests
+        # tag: # optional
+        # # Working directory containing Cypress folder
+        # working-directory: # optional
+        # Whether or not to use headed mode
+        headed: false # optional
+        # Provide a specific specs to run
+        spec: *.feature # optional
+        
