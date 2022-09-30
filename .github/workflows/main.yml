@@ -48,5 +48,5 @@ jobs:
         # Whether or not to use headed mode
         headed: false # optional
         # Provide a specific specs to run
-        spec: *.feature # optional
+        spec: "*.feature" # optional
         
